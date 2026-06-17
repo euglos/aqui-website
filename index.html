@@ -145,12 +145,7 @@
         <div class="field-row">
           <div class="field">
             <label for="r-guests">Personen *</label>
-            <select id="r-guests" name="guests" required>
-              <option value="">Wählen…</option>
-              <option>1</option><option>2</option><option>3</option><option>4</option>
-              <option>5</option><option>6</option><option>7</option>
-              <option value="8+">8 oder mehr</option>
-            </select>
+            <input type="number" id="r-guests" name="guests" min="1" max="8" step="1" inputmode="numeric" placeholder="1–8" required />
             <small class="error" data-for="r-guests"></small>
           </div>
           <div class="field">

@@ -107,7 +107,13 @@
       return sel >= today ? "" : "Das Datum liegt in der Vergangenheit.";
     },
     "r-time":  (v) => v ? "" : "Bitte wähle eine Uhrzeit.",
-    "r-guests":(v) => v ? "" : "Bitte wähle die Personenzahl.",
+    "r-guests":(v) => {
+      if (v.trim() === "") return "Bitte gib die Personenzahl ein.";
+      const n = Number(v);
+      if (!Number.isInteger(n) || n < 1) return "Bitte gib eine Zahl von 1 bis 8 ein.";
+      if (n > 8) return "Reservierungen ab 8 Personen bitte telefonisch: +43 676 9479912.";
+      return "";
+    },
     "r-phone": (v) => /^[+\d][\d\s/()-]{6,}$/.test(v.trim()) ? "" : "Bitte gib eine gültige Telefonnummer ein.",
     "r-email": (v) => v.trim() === "" || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? "" : "Bitte gib eine gültige E-Mail ein."
   };
@@ -115,10 +121,15 @@
   // Live-Validierung beim Verlassen eines Feldes
   Object.keys(validators).forEach((id) => {
     const f = document.getElementById(id);
-    if (f) f.addEventListener("blur", () => setError(f, validators[id](f.value)));
-    if (f) f.addEventListener("input", () => {
+    if (!f) return;
+    // Personenzahl sofort prüfen, damit der Telefon-Hinweis direkt erscheint
+    const liveAlways = id === "r-guests";
+    f.addEventListener("blur", () => setError(f, validators[id](f.value)));
+    f.addEventListener("input", () => {
       const wrap = f.closest(".field");
-      if (wrap && wrap.classList.contains("invalid")) setError(f, validators[id](f.value));
+      if (liveAlways || (wrap && wrap.classList.contains("invalid"))) {
+        setError(f, validators[id](f.value));
+      }
     });
   });
 
