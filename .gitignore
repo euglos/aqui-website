@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Quelldatei der Speisekarte (nicht Teil der Website)
+*.pdf

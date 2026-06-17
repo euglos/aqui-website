@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aquí · Cali-Mex Food & Bar · Summerstage Wien</title>
+  <meta name="description" content="Aquí – Californian Vibes, Mexican Bites. Cali-Mex Restaurant & Bar auf der Summerstage Wien. Tacos, Burritos, Bowls, Cocktails. Jetzt Tisch reservieren." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/aqui-logo.png" />
+</head>
+<body>
+
+  <!-- ===== Header / Nav ===== -->
+  <header class="site-header" id="top">
+    <div class="nav-inner">
+      <a href="#top" class="brand" aria-label="Aquí Startseite">
+        <img src="assets/aqui-logo.png" alt="Aquí Logo" class="brand-logo" />
+      </a>
+      <nav class="nav-links" aria-label="Hauptnavigation">
+        <a href="#about">Über uns</a>
+        <a href="#food">Speisen</a>
+        <a href="#drinks">Getränke</a>
+        <a href="#visit">Finden</a>
+        <a href="#reserve" class="btn btn-nav">Tisch reservieren</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" aria-label="Mobile Navigation">
+      <a href="#about">Über uns</a>
+      <a href="#food">Speisen</a>
+      <a href="#drinks">Getränke</a>
+      <a href="#visit">Finden</a>
+      <a href="#reserve" class="btn btn-block">Tisch reservieren</a>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-kicker">Summerstage Wien · seit 04.05.2026</p>
+      <h1 class="hero-title">Californian Vibes,<br><span>Mexican Bites.</span></h1>
+      <p class="hero-lead">Frische Zutaten, traditionelle Zubereitung und ein bisschen Sonnenschein aus Kalifornien – direkt an der Donau.</p>
+      <div class="hero-actions">
+        <a href="#reserve" class="btn btn-primary btn-lg">Tisch reservieren</a>
+        <a href="#food" class="btn btn-ghost btn-lg">Speisekarte ansehen</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Weiter scrollen">↓</a>
+  </section>
+
+  <!-- ===== About / Highlights ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-top">
+        <div class="about-text">
+          <p class="eyebrow">Hola, willkommen bei Aquí</p>
+          <h2>Cali-Mex, wie es sein soll.</h2>
+          <p>Tacos, Burritos und Bowls treffen auf kalifornische Lebensfreude – frische Zutaten, langsam geschmort, mit viel Liebe gemacht.</p>
+        </div>
+        <div class="about-media">
+          <img src="assets/interior.jpg" alt="Innenraum des Restaurants Aquí mit Terrakotta-Tischen und Grünpflanzen" loading="lazy" />
+        </div>
+      </div>
+      <ul class="highlight-list">
+        <li><strong>Mexican Streetfood</strong><span>Frisch gemachte Tacos & Burritos</span></li>
+        <li><strong>Bar & Cocktails</strong><span>Mexikanische Klassiker frisch gemixt</span></li>
+        <li><strong>Vegetarisch & vegan</strong><span>Viele pflanzliche Optionen</span></li>
+        <li><strong>Summerstage Terrasse</strong><span>Essen direkt am Donaukanal</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Feature Band ===== -->
+  <section class="feature-band" aria-label="Frisch zubereitet">
+    <div class="fb-overlay"></div>
+    <div class="container fb-inner">
+      <p class="eyebrow eyebrow-light">Frisch. Täglich. Hausgemacht.</p>
+      <h2>Echtes Streetfood,<br>direkt vom Grill.</h2>
+      <a href="#food" class="btn btn-ghost btn-lg">Zur Speisekarte</a>
+    </div>
+  </section>
+
+  <!-- ===== Food Menu ===== -->
+  <section class="menu" id="food">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Speisekarte</p>
+        <h2>Unsere Küche</h2>
+        <p class="section-sub">Preise in Euro. Allergeninformationen erhältst du gerne bei unserem Service-Team.</p>
+      </header>
+      <div class="menu-grid" id="food-menu"><!-- gerendert via JS --></div>
+    </div>
+  </section>
+
+  <!-- ===== Drinks Menu ===== -->
+  <section class="menu menu-alt" id="drinks">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Getränkekarte</p>
+        <h2>Drinks & Bar</h2>
+        <p class="section-sub">Cocktails, Weine und Bier – frisch gemixt und gut gekühlt.</p>
+      </header>
+      <div class="menu-grid" id="drinks-menu"><!-- gerendert via JS --></div>
+    </div>
+  </section>
+
+  <!-- ===== Reservation ===== -->
+  <section class="reserve" id="reserve">
+    <div class="container reserve-grid">
+      <div class="reserve-intro">
+        <p class="eyebrow">Reservierung</p>
+        <h2>Sichere dir deinen Tisch</h2>
+        <p>Reserviere online – für Gruppen ab 8 Personen ruf uns an: <a href="tel:+436769479912">+43 676 9479912</a>.</p>
+        <ul class="reserve-facts">
+          <li><strong>So–Di</strong><span>17:00 – 23:00</span></li>
+          <li><strong>Mi–Sa</strong><span>16:00 – 00:00</span></li>
+          <li><strong>Adresse</strong><span>Summerstage, 1090 Wien</span></li>
+        </ul>
+      </div>
+
+      <form class="reserve-form" id="reserveForm" novalidate>
+        <div class="field">
+          <label for="r-name">Name *</label>
+          <input type="text" id="r-name" name="name" autocomplete="name" required />
+          <small class="error" data-for="r-name"></small>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="r-date">Datum *</label>
+            <input type="date" id="r-date" name="date" required />
+            <small class="error" data-for="r-date"></small>
+          </div>
+          <div class="field">
+            <label for="r-time">Uhrzeit *</label>
+            <input type="time" id="r-time" name="time" required />
+            <small class="error" data-for="r-time"></small>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="r-guests">Personen *</label>
+            <select id="r-guests" name="guests" required>
+              <option value="">Wählen…</option>
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7</option>
+              <option value="8+">8 oder mehr</option>
+            </select>
+            <small class="error" data-for="r-guests"></small>
+          </div>
+          <div class="field">
+            <label for="r-phone">Telefon *</label>
+            <input type="tel" id="r-phone" name="phone" autocomplete="tel" required />
+            <small class="error" data-for="r-phone"></small>
+          </div>
+        </div>
+        <div class="field">
+          <label for="r-email">E-Mail</label>
+          <input type="email" id="r-email" name="email" autocomplete="email" />
+          <small class="error" data-for="r-email"></small>
+        </div>
+        <div class="field">
+          <label for="r-notes">Anmerkungen (optional)</label>
+          <textarea id="r-notes" name="notes" rows="3" placeholder="Hochstuhl, Allergien, besonderer Anlass…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Reservierung anfragen</button>
+        <p class="form-note" id="formNote" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Location / Map ===== -->
+  <section class="location" id="visit">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">So findest du uns</p>
+        <h2>Aquí auf der Summerstage</h2>
+      </header>
+      <div class="location-grid">
+        <div class="location-card">
+          <h3>Adresse</h3>
+          <p>Summerstage<br>Rossauer Lände, 1090 Wien<br>Österreich</p>
+          <h3>Kontakt</h3>
+          <p>
+            <a href="tel:+436769479912">+43 676 9479912</a><br>
+            <a href="mailto:office@aqui-restaurant.at">office@aqui-restaurant.at</a>
+          </p>
+          <h3>Öffnungszeiten</h3>
+          <p>So – Di: 17:00 – 23:00<br>Mi – Sa: 16:00 – 00:00</p>
+          <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Summerstage+Wien" target="_blank" rel="noopener">Route planen</a>
+        </div>
+        <div class="map-frame">
+          <iframe
+            title="Karte: Aquí auf der Summerstage Wien"
+            src="https://maps.google.com/maps?q=Summerstage%20Wien&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="100%" style="border:0;"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer" id="kontakt">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/aqui-logo.png" alt="Aquí Logo" class="footer-logo" />
+        <p>Californian Vibes, Mexican Bites.<br>Summerstage Wien.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.tiktok.com/" aria-label="TikTok" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Öffnungszeiten</h3>
+        <ul>
+          <li><span>So – Di</span><span>17:00 – 23:00</span></li>
+          <li><span>Mi – Sa</span><span>16:00 – 00:00</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Kontakt</h3>
+        <ul>
+          <li><a href="tel:+436769479912">+43 676 9479912</a></li>
+          <li><a href="mailto:office@aqui-restaurant.at">office@aqui-restaurant.at</a></li>
+          <li>Summerstage<br>1090 Wien, Österreich</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li>Restaurant & Bar</li>
+          <li>Takeaway</li>
+          <li>Zustellung</li>
+          <li>Wöchentliches Mittagsmenü</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Restaurant Aquí · Cali-Mex Food & Bar</p>
+      <p><a href="#top">Nach oben ↑</a></p>
+    </div>
+  </footer>
+
+  <script src="menu-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
