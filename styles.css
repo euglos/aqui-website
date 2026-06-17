@@ -139,8 +139,9 @@ h3 { font-size: 1.15rem; }
   text-shadow: 0 6px 30px rgba(0,0,0,.25);
 }
 .hero-title span { color: #f3d9ad; }
-.hero-lead { font-size: clamp(1.05rem, 2.2vw, 1.3rem); margin: 1.4rem auto 2.2rem; max-width: 560px; opacity: .96; }
+.hero-lead { font-size: clamp(1.05rem, 2.2vw, 1.3rem); font-weight: 500; margin: 1.4rem auto 2.2rem; max-width: 560px; opacity: .96; }
 .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.hero-actions .btn, .fb-inner .btn { min-width: 250px; }
 .scroll-cue {
   position: absolute; bottom: 1.6rem; left: 50%; transform: translateX(-50%);
   z-index: 1; font-size: 1.6rem; color: #fff; opacity: .8;
@@ -159,14 +160,14 @@ h3 { font-size: 1.15rem; }
 }
 .highlight-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
 .highlight-list li {
-  display: flex; flex-direction: column; gap: .4rem;
+  display: flex; flex-direction: column; gap: .4rem; text-align: center;
   background: var(--white); border: 1px solid var(--line);
   padding: 1.4rem 1.4rem; border-radius: var(--radius); box-shadow: var(--shadow-sm);
   transition: transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease);
 }
 .highlight-list li:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--terra); }
 .highlight-list strong { font-size: 1.05rem; color: var(--terra-dk); letter-spacing: -.01em; }
-.highlight-list span { font-size: .92rem; color: var(--ink-soft); line-height: 1.5; }
+.highlight-list span { font-size: .85rem; color: var(--ink-soft); line-height: 1.5; }
 @media (max-width: 860px) { .highlight-list { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 460px) { .highlight-list { grid-template-columns: 1fr; } }
 
