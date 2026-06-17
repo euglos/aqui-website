@@ -266,6 +266,23 @@ h3 { font-size: 1.15rem; }
   background-repeat: no-repeat; background-position: right .95rem center;
 }
 .field textarea { height: auto; padding: .7rem .9rem; resize: vertical; }
+
+/* Datum/Uhrzeit auf Mobile (iOS/Safari) sauber zentrieren */
+.field input[type="date"],
+.field input[type="time"] {
+  -webkit-appearance: none; appearance: none;
+  display: flex; align-items: center;
+  min-width: 0; line-height: normal;
+}
+.field input[type="date"]::-webkit-date-and-time-value,
+.field input[type="time"]::-webkit-date-and-time-value {
+  text-align: left; margin: 0;
+}
+.field input[type="date"]::-webkit-calendar-picker-indicator,
+.field input[type="time"]::-webkit-calendar-picker-indicator {
+  margin-left: auto; opacity: .55;
+}
+
 .field input:focus, .field select:focus, .field textarea:focus {
   outline: none; background: #fff; border-color: var(--terra); box-shadow: 0 0 0 3px rgba(187,85,47,.16);
 }
@@ -333,8 +350,10 @@ h3 { font-size: 1.15rem; }
   .nav-toggle { display: flex; }
   .nav-mobile.open { display: flex; }
 }
-@media (max-width: 540px) {
+@media (max-width: 620px) {
   .field-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 540px) {
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; }
 }
