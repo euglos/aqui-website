@@ -142,12 +142,6 @@ h3 { font-size: 1.15rem; }
 .hero-lead { font-size: clamp(1.05rem, 2.2vw, 1.3rem); font-weight: 500; margin: 1.4rem auto 2.2rem; max-width: 560px; opacity: .96; }
 .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 .hero-actions .btn, .fb-inner .btn { min-width: 250px; }
-.scroll-cue {
-  position: absolute; bottom: 1.6rem; left: 50%; transform: translateX(-50%);
-  z-index: 1; font-size: 1.6rem; color: #fff; opacity: .8;
-  animation: bob 1.8s var(--ease) infinite;
-}
-@keyframes bob { 0%,100%{ transform: translate(-50%,0);} 50%{ transform: translate(-50%,8px);} }
 
 /* ---------- About ---------- */
 .about { padding: clamp(4rem, 9vw, 7rem) 0; }
@@ -220,7 +214,7 @@ h3 { font-size: 1.15rem; }
 
 /* ---------- Reservation ---------- */
 .reserve { padding: clamp(4rem, 9vw, 7rem) 0; background: var(--sand-2); color: var(--ink); }
-.reserve-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.reserve-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
 .reserve-intro h2 { margin-bottom: 1rem; }
 .reserve-intro p { color: var(--ink-soft); max-width: 42ch; }
 .reserve-intro a { color: var(--terra-dk); font-weight: 600; }
@@ -350,5 +344,4 @@ h3 { font-size: 1.15rem; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .scroll-cue { animation: none; }
 }
