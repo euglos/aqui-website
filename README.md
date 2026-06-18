@@ -1,6 +1,6 @@
 # Aquí · Cali-Mex Food & Bar — Website
 
-Redesign der Website für das Restaurant **Aquí** auf der Summerstage Wien.
+Redesign der Website für das Restaurant **Aquí** auf der Summerstage Wien. \n
 https://euglos.github.io/aqui-website/
 
 ## Inhalt
