@@ -158,7 +158,6 @@ h3 { font-size: 1.15rem; }
   width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
   border-radius: var(--radius); box-shadow: var(--shadow-md);
 }
-@media (max-width: 460px) { .highlight-list { grid-template-columns: 1fr; } }
 
 /* ---------- Feature Band ---------- */
 .feature-band {
